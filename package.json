@@ -1,0 +1,19 @@
+{
+  "name": "safenavigation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msv2017/safenav.git"
+  },
+  "author": "msv2017",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msv2017/safenav/issues"
+  },
+  "homepage": "https://github.com/msv2017/safenav#readme"
+}
