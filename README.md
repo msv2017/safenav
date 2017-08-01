@@ -8,7 +8,7 @@ safenav is a node.js module that allows to use safe navigation through propertie
 
 ## Usage
 
-	var safenav = require('safenav')
+	var safenav = require('safenav');
 
 	var obj ={
 		p1: {
@@ -16,12 +16,15 @@ safenav is a node.js module that allows to use safe navigation through propertie
 				p3: 123
 			}
 		}
-	}
+	};
 
-	console.log(safenav(obj)(x => x.p1.p2.p3)); //prints 123
+	var p3 = safenav(obj)(x => x.p1.p2.p3);
+	console.log(p3); //prints 123
 	
-	console.log(safenav(obj)(x => x.wrong.property.name)); // prints undefined
+	var wrongPropertyName = safenav(obj)(x => x.wrong.property.name);
+	console.log(wrongPropertyName); //prints undefined
 	
 Also, default object is allowed:
 
-	console.log(safenav(obj, false)(x => x.wrong.property.name)); // prints false
+	var defaultValue = safenav(obj, false)(x => x.wrong.property.name);
+	console.log(defaultValue); //prints false
